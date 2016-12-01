@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('contact');
-            $table->boolean('newsletter')->default(0);
+            $table->boolean('newsletter')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
-use Validator;
-use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Http\Controllers\Controller;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
+use Validator;
+use App\User;
 
 class RegisterController extends Controller
 {
@@ -73,6 +75,8 @@ class RegisterController extends Controller
         $user->contact = $data['contact'];
         $user->newsletter = ($data['newsletter'] ? 1 : 0);
         $user->save();
+
+        return $user;
     }
 
 
