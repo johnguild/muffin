@@ -178,6 +178,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Johnguild Service Providers...
+         */
+        Johnguild\Muffincms\MuffincmsServiceProvider::class,
+
     ],
 
     /*
