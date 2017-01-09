@@ -1,3 +1,3 @@
 <?php
 
-Route::get('/package', 'johnguild\muffincms\TestController@index');
+// Route::get('/package', 'johnguild\muffincms\TestController@index');
