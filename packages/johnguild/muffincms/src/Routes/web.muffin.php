@@ -17,3 +17,6 @@ Auth::routes();
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/package', 'TestController@index');
+
+// should the last route
+Route::get('/{page}', 'Page\PageController@show');
