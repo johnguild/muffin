@@ -1,18 +1,30 @@
-Muffin CMS
+Muffin Content Management System
 
-DIRECTORIES
+ -The Package lets you make your laravel project into a CMS 
 
-(all files and folders under this package should not be modified/edited)
+Version 1.0
+Compatibility - Laravel 5.3+
 
-Foundations - contains main core traits that controllers and models uses
 
--- The following directories will be copied to the main app for you to modify/copy (See MuffincmsServiceProvider) --
+How to install:
+	- Create your laravel project
+	- Paste the package in root/packages/johnguild/
+	- Add the package in your composer.json under autoload
+        "psr-4": {
+            "App\\": "app/",
+            "Johnguild\\Muffincms\\": "packages/johnguild/muffincms/src"
+        }
+  - Run composer dump-autoload to update the file
+	- Run make:auth to use laravels authenticable user
+	- Run vendor:publish to automagically copy necessary files of the package
+	- Edit admin credentials on update user table migration
+	- Run migrate
+	- Update your routes folder by copying contents of web.muffin.php to web.php
 
-Routes - contains main route file to be copied to your apps web.php or root/routes/web.php
-Controllers - all controllers the cms uses
-Models - all models the cms uses
-Views - all views the cms uses
-Migrations - all migrations the cms uses
+	Start creating your websites pages contents
+	
+	Notes: once installed you should NOT delete the packages
+
 
 
 
